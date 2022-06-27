@@ -1,4 +1,5 @@
 import React from 'react'
+import Slide from 'react-reveal/Slide';
 import { Link } from 'react-scroll';
 
 const Footer = () => {
@@ -6,8 +7,9 @@ const Footer = () => {
       <footer className='antialiased transition-all duration-500 bg-white text-[#1C1E21] dark:bg-[#0F172A]  select-none pt-56'>
         <div className='container pt-16 md:pl-60'>
           <div className='flex flex-wrap'>
+            <Slide left>
             <div className="w-full mb-12 dark:text-slate-300 font-medium md:w-1/3 px-8">
-              <h2 className='font-bold text-4xl dark:text-white mb-5'>JsonDev</h2>
+              <h2 className='font-bold text-4xl dark:text-white mb-5'>JDev</h2>
               <h3 className='font-bold text-2xl mb-2'>Contact Me</h3>
               <p>egagofurtriwahana@gmail.com</p>
               <p>JL. Sakura No. 65164</p>
@@ -50,12 +52,14 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+            </Slide>
           </div>
         </div>
+        
 
         <div className="w-full h-full pt-10 border-t border-slate-700 bg-[#0F172A] pb-12">
           <div className="flex items-center justify-center pb-5">
-            <p className='font-medium text-xs text-slate-500 text-center'>Built with <span className='text-pink-500'>❤️</span> by <a href="https://egagofur-socialprofile.web.app/" className='font-bold text-[#00df9a] hover:text-white'>Json Dev</a>, using <a href="https://tailwindcss.com/" className='font-bold text-sky-500 hover:text-white'>Tailwind CSS</a></p>
+            <p className='font-medium text-xs text-slate-500 text-center'>Built with <span className='text-pink-500'>❤️</span> by <a href="https://egagofur-socialprofile.web.app/" className='font-bold text-[#00df9a] hover:text-white'>JDev</a>, using <a href="https://tailwindcss.com/" className='font-bold text-sky-500 hover:text-white'>Tailwind CSS</a></p>
           </div>
         </div>
       </footer>

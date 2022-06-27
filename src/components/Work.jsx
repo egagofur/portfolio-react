@@ -1,3 +1,6 @@
+import Bounce from 'react-reveal/Bounce';
+
+
 import React from 'react';
 import Work1 from '../assets/work1.png';
 import Work2 from '../assets/work2.png';
@@ -5,22 +8,30 @@ import Work3 from '../assets/work3.png';
 import Work4 from '../assets/work4.png';
 import Work5 from '../assets/work5.png'
 import Work6 from '../assets/work6.png'
+import Zoom from 'react-reveal/Zoom';
 
 const Work = () => {
   return (
     <div name='work' className=' antialiased transition-all duration-500 pt-80 pb-52 w-full md:h-screen text-[#1C1E21] dark:text-gray-300 bg-white dark:bg-[#0F172A] select-none'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-        <div className='pb-8'>
+        <Bounce left>
+        <div className=''>
           <p className='text-4xl font-bold inline border-b-4 border-pink-600'>
             Work
           </p>
+        </div>
+        </Bounce>
+        <Zoom right>
+        <div className='pb-8'>
           <p className='py-6'>// Check out some of my recent work</p>
         </div>
+        </Zoom>
 
 {/* Container */}
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4 space-y-2 aspect-square'>
 
             {/* Grid Item */}
+            <Bounce top>
           <div
             style={{ backgroundImage: `url(${Work5})` }}
             className='shadow-lg p-8 rounded-2xl shadow-[#040c16/20] dark:shadow-[#040c16] group container flex justify-center items-center mx-auto content-div'
@@ -44,6 +55,8 @@ const Work = () => {
               </div>
             </div>
           </div>
+          </Bounce>
+          <Bounce top>
           <div
             style={{ backgroundImage: `url(${Work4})` }}
             className='shadow-lg p-8 rounded-2xl shadow-[#040c16/20] dark:shadow-[#040c16] group container flex justify-center items-center mx-auto content-div'
@@ -67,7 +80,9 @@ const Work = () => {
               </div>
             </div>
           </div>
+          </Bounce>
             {/* Grid Item */}
+            <Bounce top>
           <div
             style={{ backgroundImage: `url(${Work3})` }}
             className='shadow-lg p-8 rounded-2xl shadow-[#040c16/20] dark:shadow-[#040c16] group container flex justify-center items-center mx-auto content-div'
@@ -91,6 +106,9 @@ const Work = () => {
               </div>
             </div>
           </div>
+          </Bounce>
+            {/* Grid Item */}
+            <Bounce top>
           <div
             style={{ backgroundImage: `url(${Work6})` }}
             className='shadow-lg p-8 rounded-2xl shadow-[#040c16/20] dark:shadow-[#040c16] group container flex justify-center items-center mx-auto content-div'
@@ -114,7 +132,9 @@ const Work = () => {
               </div>
             </div>
           </div>
+          </Bounce>
             {/* Grid Item */}
+            <Bounce top>
           <div
             style={{ backgroundImage: `url(${Work2})` }}
             className='shadow-lg p-8 rounded-2xl shadow-[#040c16/20] dark:shadow-[#040c16] group container flex justify-center items-center mx-auto content-div'
@@ -138,6 +158,9 @@ const Work = () => {
               </div>
             </div>
           </div>
+          </Bounce>
+            {/* Grid Item */}
+            <Bounce top>
           <div
             style={{ backgroundImage: `url(${Work1})` }}
             className='shadow-lg p-8 rounded-2xl shadow-[#040c16/20] dark:shadow-[#040c16] group container flex justify-center items-center mx-auto content-div'
@@ -161,6 +184,7 @@ const Work = () => {
               </div>
             </div>
           </div>
+          </Bounce>
         </div>
       </div>
     </div>

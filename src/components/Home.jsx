@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import {HiArrowNarrowRight} from 'react-icons/hi';
 import Typical from 'react-typical';
 import TextLoop from "react-text-loop";
+import Bounce from 'react-reveal/Bounce';
 
 
 const Home = () => {
@@ -11,11 +12,12 @@ const Home = () => {
     <div name='home' className=' antialiased w-full h-screen bg-white dark:bg-[#0F172A] transition-all duration-500 '>
         {/* container */}
         <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full select-none'>
+        <Bounce bottom>
           <p className='text-gray-600 dark:text-[#f472b6]'>Hello i'm</p>
           <div>
           <TextLoop interval={2000}>
                 <span><h1 className='text-4xl sm:text-7xl font-bold text-[#1C1E21] dark:text-[#e2e8f0]'>Ega Gofur</h1></span>
-                <span><h1 className='text-4xl sm:text-7xl font-bold text-green-400'>Json Dev</h1></span>
+                <span><h1 className='text-4xl sm:text-7xl font-bold text-green-400'>JDev</h1></span>
           </TextLoop>
           </div>
           <div>
@@ -43,6 +45,7 @@ const Home = () => {
           </button>
           </Link>
           </div>
+          </Bounce>
         </div>
     </div>
   )

@@ -9,13 +9,16 @@ import { AiOutlineClose } from "react-icons/ai";
 import { BiMenuAltRight } from "react-icons/bi";
 import { BsInstagram,BsTelegram } from "react-icons/bs";
 import { Link } from 'react-scroll';
+import LightSpeed from 'react-reveal/LightSpeed';
+import Zoom from 'react-reveal/Zoom';
+import Bounce from 'react-reveal/Bounce';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className='navbar fixed bg-white/50 dark:bg-[#0F172A]/50 backdrop-filter backdrop-blur antialiased transition-all duration-300 ease-in decoration-dashed w-full h-[80px] flex justify-between items-center px-8 text-[#1C1E21] dark:text-gray-300 z-20 select-none'>
+    <div className='navbar fixed bg-base/50 dark:bg-[#0F172A]/50 backdrop-filter backdrop-blur antialiased transition-all duration-300 ease-in decoration-dashed w-full h-[80px] flex justify-between items-center px-8 text-[#1C1E21] dark:text-gray-300 z-20 select-none'>
       <div className='text-4xl font-bold text-[#00df9a] flex cursor-pointer z-10'>
         {/* Hamburger */}
       <div onClick={handleClick} className='md:hidden z-10 cursor-pointer '>
@@ -23,13 +26,16 @@ const Navbar = () => {
       </div>
 
       {/* logo */}
+      <Zoom left>
         <h1>J<span className='text-4xl font-bold text-[#1C1E21] dark:text-gray-300 cursor-pointer'>D</span></h1>
+      </Zoom>
       </div>
       <div className="md:hidden">
           <Toggle/>
       </div>
 
       {/* menu */}
+      <LightSpeed right>
       <ul className='hidden md:flex items-center'>
         <li className='hover:text-[#a2a2f6] dark:hover:text-gray-400 inline dark:border-[#0F172A] dark:border-b-4 dark:hover:border-[#a2a2f6]'>
           <Link to='home' smooth={true} duration={500}>
@@ -72,15 +78,17 @@ const Navbar = () => {
           <Toggle/>
         </li>
       </ul>
-
+      </LightSpeed>
       {/* Mobile menu */}
+      <Bounce left>
       <ul
         className={
           !nav
             ? 'hidden'
-            : 'fixed top-0 left-0 w-[60%] h-screen border-r border-r-gray-200  dark:border-r-gray-800 bg-white dark:bg-[#0F172A] flex flex-col pt-24  pl-6 items-start pb-20 transition-all duration-1000 ease-in-out '
+            : 'fixed top-0 left-0 w-[60%] h-screen border-r border-r-gray-200  dark:border-r-gray-800 bg-white dark:bg-[#0F172A] flex flex-col pt-24  pl-6 items-start pb-20 transition-all duration-1000  ease-in-out '
         }
       >
+      
         <li className='p-4 border-b border-gray-600 hover:text-[#a2a2f6] dark:hover:text-[#a2a2f6]'>
           <Link onClick={handleClick} to='home' smooth={true} duration={500}>
             Home
@@ -117,9 +125,11 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+      </Bounce>
 
 
       {/* Social icons */}
+      <Bounce left>
       <div className='hidden lg:flex fixed flex-col top-[350%] left-0'>
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
@@ -147,6 +157,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+      </Bounce>
     </div>
   );
 };

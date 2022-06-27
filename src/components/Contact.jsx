@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import Bounce from 'react-reveal/Bounce';
 import emailjs from 'emailjs-com';
 
 
@@ -33,12 +34,15 @@ const Contact = () => {
   return (
     <div name='contact' className=' antialiased transition-all duration-500 w-full h-screen bg-white text-[#1C1E21] dark:bg-[#0F172A] select-none pt-64'>
         <div className='container'>
+          <Bounce left>
         <div className='md:text-center sm:text-right pb-8 pl-4 dark:text-gray-300 select-none'>
             <p className='text-4xl font-bold inline border-b-4 border-pink-600'>
               Contact
             </p>
           </div>
+          </Bounce>
             <form ref={form} onSubmit={sendEmail}>
+            <Bounce top cascade>
             <div className="w-full lg:w-2/3 lg:mx-auto">
             <div className="w-full px-4 mb-8">
                 <label htmlFor="name" className='text-base dark:text-white font-bold'>Name</label>
@@ -50,12 +54,13 @@ const Contact = () => {
             </div>
             <div className="w-full px-4 mb-8">
                 <label htmlFor="message" className='text-base dark:text-white font-bold'>Message</label>
-                <textarea type="text" id='message' name='message' placeholder='Your Message' className='w-full resize-none dark:bg-[#1E293B] dark:text-white p-3 rounded-md border-2 border-[#353F4F]/75 ' required ></textarea>
+                <textarea type="text" id='message' name='message' placeholder='Your Message' className='w-full dark:bg-[#1E293B] dark:text-white p-3 rounded-md border-2 border-[#353F4F]/75 ' required ></textarea>
             </div>
             <div className="w-full px-4">
               <button className='btn text-base font-semibold bg-[#1C1E21] text-white hover:bg-white hover:text-[#0F172A] hover:border-[#0F172A] dark:text-[#0F172A] dark:bg-[#a2a2f6] dark:hover:bg-[#0F172A] dark:hover:text-[#a2a2f6] border-2 dark:border-[#0F172A] dark:hover:border-[#a2a2f6] py-3 px-8 rounded-md focus:outline-none'  onClick={openModal}>Send Message</button>
             </div>
             </div>
+            </Bounce>
             </form>
         </div>
         {/* modal */}
