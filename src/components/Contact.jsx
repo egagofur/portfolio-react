@@ -32,7 +32,7 @@ const Contact = () => {
     }
 
   return (
-    <div name='contact' className=' antialiased transition-all duration-500 w-full h-screen bg-white text-[#1C1E21] dark:bg-[#0F172A] select-none pt-64'>
+    <div name='contact' className=' antialiased transition-all duration-500 w-full h-screen bg-white text-[#1C1E21] dark:bg-[#0F172A] select-none pt-96'>
         <div className='container'>
           <Bounce left>
         <div className='md:text-center sm:text-right pb-8 pl-4 dark:text-gray-300 select-none'>

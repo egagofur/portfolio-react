@@ -19,7 +19,7 @@ import NEXT from '../assets/next.svg'
 
 export const Skills = () => {
   return (
-    <div name="skills" className=' antialiased transition-all duration-500 w-full h-screen bg-white pt-80 pb-52  dark:bg-[#0F172A] text-[#1C1E21] dark:text-gray-300 select-none'>
+    <div name="skills" className=' antialiased transition-all duration-500 w-full h-screen bg-white pt-80 pb-72  dark:bg-[#0F172A] text-[#1C1E21] dark:text-gray-300 select-none'>
         {/* container */}
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full '>
         <Bounce left>

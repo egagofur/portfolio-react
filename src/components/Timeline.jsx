@@ -7,7 +7,7 @@ import Bounce from 'react-reveal/Bounce';
 
 const Timeline = () => {
   return (
-    <div name='experience' className=' antialiased transition-all duration-500  w-full h-screen bg-white dark:bg-[#0F172A] text-[#1C1E21] dark:text-gray-300 select-none pt-20 pb-20 '>
+    <div name='experience' className=' antialiased transition-all duration-500  w-full h-screen bg-white dark:bg-[#0F172A] text-[#1C1E21] dark:text-gray-300 select-none pt-64 pb-20 '>
         <Bounce left>
         <div className='md:text-center sm:text-right pb-8 pl-4'>
             <p className='text-4xl font-bold inline border-b-4 border-pink-600'>
